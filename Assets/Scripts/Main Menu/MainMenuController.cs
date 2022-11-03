@@ -9,19 +9,19 @@ public class MainMenuController : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("GamePlay");
-        Debug.Log("Berpindah scene");
+        Debug.Log("Create By Punto Putra");
     }
 
     // func Author
     public void OpenAuthor()
     {
-        Debug.Log("Create By Pikaruo, hohoho");
+        Debug.Log("Create By Punto Putra");
     }
 
     // func Quit Game
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Keluar game");
+        Debug.Log("Create By Punto Putra");
     }
 }
