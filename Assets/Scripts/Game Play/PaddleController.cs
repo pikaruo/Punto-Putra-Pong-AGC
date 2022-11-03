@@ -8,19 +8,30 @@ public class PaddleController : MonoBehaviour
     [SerializeField] int speed;
     [SerializeField] KeyCode upKey;
     [SerializeField] KeyCode downKey;
-    private Rigidbody2D rig;
+    private Rigidbody2D rb;
+    private Transform tf;
 
     private void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        tf = GetComponent<Transform>();
     }
 
     void Update()
     {
         // move object
         MoveObject(GetInput());
+        if (tf.position.y > 3.75f)
+        {
+            tf.position = new Vector2(transform.position.x, 3.75f);
+        }
+        else if (tf.position.y < -3.75f)
+        {
+            tf.position = new Vector2(transform.position.x, -3.75f);
+        }
     }
 
+    // func get input
     private Vector2 GetInput()
     {
         if (Input.GetKey(upKey))
@@ -36,8 +47,10 @@ public class PaddleController : MonoBehaviour
         return Vector2.zero;
     }
 
+    // func move move paddle
     private void MoveObject(Vector2 movement)
     {
-        rig.velocity = movement;
+        Debug.Log("Test : " + movement);
+        rb.velocity = movement;
     }
 }
