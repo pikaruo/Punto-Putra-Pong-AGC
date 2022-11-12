@@ -50,7 +50,7 @@ public class PaddleController : MonoBehaviour
     // func move move paddle
     private void MoveObject(Vector2 movement)
     {
-        Debug.Log("Test : " + movement);
+        // Debug.Log("Test : " + movement);
         rb.velocity = movement;
     }
 }
