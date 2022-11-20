@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpManager : MonoBehaviour
+public class SpeedUpManager : MonoBehaviour
 {
     public Transform spawnArea;
     public int maxPowerUpAmount;
