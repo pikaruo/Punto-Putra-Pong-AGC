@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PUSaclePaddleController : MonoBehaviour
+public class PUSpeedPaddleController : MonoBehaviour
 {
     public SpeedUpManager manager;
     public Collider2D ball;
@@ -16,13 +16,13 @@ public class PUSaclePaddleController : MonoBehaviour
     {
         if (collision == ball && ballLastLocation.velocity.x > 0)
         {
-            leftPaddle.GetComponent<PaddleController>().ActivateLeftPaddleScale(magnitude);
+            leftPaddle.GetComponent<PaddleController>().ActivatePaddleSpeed(magnitude);
             Destroy(gameObject);
             manager.RemovePowerUp(gameObject);
         }
         else if (collision == ball && ballLastLocation.velocity.x < 0)
         {
-            rightPaddle.GetComponent<PaddleController>().ActivateRigtPaddleScale(magnitude);
+            rightPaddle.GetComponent<PaddleController>().ActivatePaddleSpeed(magnitude);
             Destroy(gameObject);
             manager.RemovePowerUp(gameObject);
         }

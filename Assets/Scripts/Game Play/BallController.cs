@@ -10,16 +10,13 @@ public class BallController : MonoBehaviour
     [SerializeField] Vector2 resetPosition;
     public Rigidbody2D rig;
 
+    Vector2 speedAwal;
+
     private void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         // ball move
         rig.velocity = speed;
-    }
-
-    private void Update()
-    {
-        arahBola();
     }
 
     // reset ball pos
@@ -34,16 +31,4 @@ public class BallController : MonoBehaviour
         rig.velocity *= magnitude;
     }
 
-    public GameObject leftPaddle, rightPaddle;
-    public void arahBola()
-    {
-        if (rig.velocity.x < 0)
-        {
-            Debug.Log("Negatif : " + rig.velocity.x);
-        }
-        else if (rig.velocity.x > 0)
-        {
-            Debug.Log("Positif : " + rig.velocity.x);
-        }
-    }
 }

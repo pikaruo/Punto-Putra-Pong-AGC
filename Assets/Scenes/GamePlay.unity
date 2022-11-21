@@ -316,8 +316,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 382679921}
   ball: {fileID: 2094275053}
+  magnitude: 2
   leftPaddle: {fileID: 627385313}
   rightPaddle: {fileID: 1382363512}
+  ballLastLocation: {fileID: 2094275052}
 --- !u!1 &353983427
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +654,7 @@ GameObject:
   - component: {fileID: 528310710}
   - component: {fileID: 528310711}
   - component: {fileID: 528310712}
+  - component: {fileID: 528310713}
   m_Layer: 0
   m_Name: SpeedUp Paddle ObjectUp
   m_TagString: Untagged
@@ -740,6 +743,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &528310713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528310709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379150dc0fb6061429753733db495036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 382679921}
+  ball: {fileID: 2094275053}
+  magnitude: 2
+  leftPaddle: {fileID: 627385313}
+  rightPaddle: {fileID: 1382363512}
+  ballLastLocation: {fileID: 2094275052}
 --- !u!1 &549509070
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +994,10 @@ MonoBehaviour:
   speed: 5
   upKey: 119
   downKey: 115
+  leftPaddle: {fileID: 627385313}
+  rightPaddle: {fileID: 1382363512}
+  timeOut: 5
+  timer: 0
 --- !u!50 &627385317
 Rigidbody2D:
   serializedVersion: 4
@@ -1690,6 +1715,10 @@ MonoBehaviour:
   speed: 5
   upKey: 273
   downKey: 274
+  leftPaddle: {fileID: 627385313}
+  rightPaddle: {fileID: 1382363512}
+  timeOut: 5
+  timer: 0
 --- !u!50 &1382363516
 Rigidbody2D:
   serializedVersion: 4
@@ -2351,11 +2380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e980b94d37a505c449aa2cdce5b14d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 5, y: 0}
+  speed: {x: 8, y: 0}
   resetPosition: {x: 0, y: 0}
   rig: {fileID: 0}
-  leftPaddle: {fileID: 0}
-  rightPaddle: {fileID: 0}
 --- !u!50 &2094275052
 Rigidbody2D:
   serializedVersion: 4
